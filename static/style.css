@@ -8,40 +8,101 @@
   font-weight: 400;
   color: #666666;
 }
+
 body {
   background-color: #666666;
 }
 
 header {
-  height: 50px;
+  height: 48px;
   background-color: white;
   padding-left: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-size: 1.2rem;
   font-weight: 700;
 }
+
+h1 {
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+}
+thead {
+  background-color: #666666;
+}
+thead tr th {
+  color: white;
+}
+thead tr th:last-child {
+  background-color: white;
+}
+th,
+td {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #817f7f52;
+}
+tbody tr:nth-child(even) {
+  background-color: #cfcbcb52;
+}
+
 .main {
   width: 80vw;
-  margin: 50px auto;
+  margin: 52px auto;
+  padding: 4vw;
   border-radius: 8px;
   background-color: white;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 button {
   font-family: inherit;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 8px;
 }
 
-.buttons {
-  display: flex;
-}
-
-.buttons__button {
-  padding: 12px;
-}
 .buttons__button:hover {
   color: white;
   background-color: black;
+}
+
+.table__button {
+  border-radius: 8px;
+  padding: 4px;
+  color: white;
+}
+.table__button--modify {
+  background-color: rgb(87, 164, 87);
+}
+.table__button--modify:hover {
+  background-color: rgb(36, 163, 36);
+}
+
+.table__button--delete {
+  background-color: rgb(197, 56, 56);
+}
+.table__button--delete:hover {
+  background-color: rgb(196, 22, 22);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    /* width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; */
+  }
 }
