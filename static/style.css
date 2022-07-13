@@ -26,6 +26,7 @@ header {
 
 h1 {
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 table {
@@ -37,20 +38,29 @@ thead {
 thead tr th {
   color: white;
 }
+
 thead tr th:last-child {
   background-color: white;
 }
 th,
 td {
   padding: 8px;
-  border-radius: 4px;
+  position: relative;
+}
+
+table tr {
+  border-top: 2px solid transparent;
 }
 
 tbody tr:nth-child(odd) {
   background-color: #817f7f52;
 }
 tbody tr:nth-child(even) {
-  background-color: #cfcbcb52;
+  background-color: #2b292952;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
 .main {
@@ -66,7 +76,7 @@ tbody tr:nth-child(even) {
   align-items: center;
 }
 
-button {
+.btn {
   font-family: inherit;
   border: none;
   border-radius: 8px;
@@ -78,17 +88,20 @@ button {
   color: white;
   background-color: black;
 }
-
-.table__button {
+.btn-primary {
   border-radius: 8px;
-  padding: 4px;
+  padding: 8px;
   color: white;
 }
+.btn-primary:focus {
+  box-shadow: none;
+}
+
 .table__button--modify {
-  background-color: rgb(87, 164, 87);
+  background-color: rgb(87, 105, 164);
 }
 .table__button--modify:hover {
-  background-color: rgb(36, 163, 36);
+  background-color: rgb(36, 76, 163);
 }
 
 .table__button--delete {
@@ -96,6 +109,30 @@ button {
 }
 .table__button--delete:hover {
   background-color: rgb(196, 22, 22);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer {
+  border-top: none;
+}
+.gender-box {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.gender-radios {
+  display: flex;
+}
+.gender-radio {
+  margin: 0px 0.5rem;
+}
+input[type="radio"] {
+  cursor: pointer;
+}
+label {
+  margin-bottom: 1rem;
+  margin-right: 0.2rem;
 }
 
 @media screen and (max-width: 600px) {
